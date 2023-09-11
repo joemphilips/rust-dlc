@@ -13,4 +13,6 @@ members = [
   "simple-wallet",
   "dlc-sled-storage-provider",
   "electrs-blockchain-provider",
+  "dlc-amm",
+  "dlc-amm-server",
 ]

@@ -1,0 +1,15 @@
+[package]
+name = "dlc-amm-server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.6.20"
+tokio = { version = "1.32.0", features = ["full"] }
+dlc-manager = {version = "0.4.0", path = "../dlc-manager"}
+dlc-sled-storage-provider = {path = "../dlc-sled-storage-provider"}
+bitcoin = {version = "0.29.2"}
+bitcoin-rpc-provider = {path = "../bitcoin-rpc-provider"}
+p2pd-oracle-client = {path = "../p2pd-oracle-client"}
