@@ -56,4 +56,7 @@ impl MarketScoringRule for LMSRScoringRule {
         price_for_showing(&self.total_securities, security_index, self.liquidity)
     }
 
+    fn total_securities(&self) -> &[f64] {
+        self.total_securities.as_ref()
+    }
 }

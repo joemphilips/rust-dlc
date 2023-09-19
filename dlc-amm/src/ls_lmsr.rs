@@ -1,5 +1,5 @@
 
-use crate::{lmsr::{self, cost_function_md, price_for_purchase, price_for_showing}, MarketScoringRule};
+use crate::{lmsr::{cost_function_md, price_for_purchase, price_for_showing}, MarketScoringRule};
 
 
 pub struct LSLMSRScoringRule {
@@ -32,5 +32,8 @@ impl MarketScoringRule for LSLMSRScoringRule {
 
     fn price_for_showing(&self, security_index: usize) -> f64 {
         price_for_showing(&self.total_securities, security_index, self.b())
+    }
+    fn total_securities(&self) -> &[f64] {
+        self.total_securities.as_ref()
     }
 }
